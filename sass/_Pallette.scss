@@ -1,0 +1,31 @@
+// Primary
+$primary: #066daf;
+$primary-1: #3f93ca;
+$primary-2: #1782c7;
+$primary-3: #045387;
+$primary-4: #034169;
+
+// Secondary
+$secondary: #00bb61;
+$secondary-1: #39d288;
+$secondary-2: #0cd072;
+$secondary-3: #00934c;
+$secondary-4: #00723b;
+
+// Tertiary
+$tertiary: #1019bb;
+$tertiary-1: #4f56d2;
+$tertiary-2: #2830d0;
+$tertiary-3: #0c1393;
+$tertiary-4: #080d72;
+
+// Other
+$bg-1: #e6f5ff;
+$bg-2: #ccebff;
+$bg-gradient: linear-gradient(to bottom right, $bg-1, $bg-2);
+
+$nav-1: $secondary-1;
+$nav-2: $secondary-2;
+$nav-gradient: linear-gradient(to bottom, $nav-1, $nav-2);
+
+$semi-black: #111;

@@ -1,0 +1,16 @@
+body {
+  background-color: $bg-1;
+  background-image: $bg-gradient;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+div.content {
+  margin: 1rem;
+}

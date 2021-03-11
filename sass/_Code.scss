@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/static/jetbrainsmono.woff2");
+}
+
+code {
+  background-color: white;
+  color: $semi-black;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10pt;
+  margin: 0.2rem;
+  padding: 0.1rem;
+  border-radius: 0.2rem;
+}
+
+pre code {
+  display: block;
+  border-left: 0.3rem solid $tertiary-1;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 2rem;
+  padding: 1rem 1.5rem;
+  background-color: $semi-black;
+  color: white;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10pt;
+}

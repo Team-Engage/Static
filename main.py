@@ -2,6 +2,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 from glob import glob
 import os
 import subprocess
+import sass
 
 
 env = Environment(
@@ -20,22 +21,32 @@ def clear_site_folder():
   subprocess.run(["mkdir", "site"])
 
 
-def build_site():
-  clear_site_folder()
-
-  # Builds templates
+def build_templates():
   for i in templates_list:
     tmp = env.get_template(i)
 
     with open(f"site/{i}", "wt") as f:
       f.write(tmp.render())
-  
-  # Adds static files
+
+
+def build_sass():
+  with open("site/static/style.css", "wt") as new_file:
+    new_file.write(sass.compile(filename="sass/style.scss", output_style="compressed"))
+
+
+def build_static():
   os.mkdir("site/static")
   for i in glob("static/*"):
     with open(i, "rb") as og_file:
       with open(f"site/static/{os.path.basename(i)}", "wb") as new_file:
         new_file.write(og_file.read())
+
+def build_site():
+  clear_site_folder()
+
+  build_templates()
+  build_static()
+  build_sass()
 
 
 def run(build=True):

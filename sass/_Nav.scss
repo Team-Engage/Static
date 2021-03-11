@@ -1,0 +1,26 @@
+ul.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0.5rem;
+  overflow: hidden;
+  background-color: $nav-1;
+  background-image: $nav-gradient;
+
+  li {
+    float: left;
+
+    a {
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      margin-right: 0.3rem;
+    }
+
+    a:hover {
+      background-color: $semi-black;
+      color: white;
+    }
+  }
+}
